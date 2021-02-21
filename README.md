@@ -16,6 +16,8 @@ In this file we perform the (manual) selection of datasets to be used. We also q
 ### Step 2. Download by dataset.
 In this step, we download the part of all these useful datasets that occur in the region of interest. For practical reasons this region is subdivided in many subregions - in that way the downloaded files are not too big and there is less risk of interruptions of the process. After download, all these files will be recombined into one big datafile. 
 
+![regions of interest](https://github.com/EMODnet/EMODnet-Biology-Phytoplankton-Greater-BalticSea/blob/master/regionsOfInterest.png)
+
 ### step 3. Combine all downloaded datasets into one big dataset
 In this step, we read in all the files written during the previous step, and combine the data into one big dataset to be used for further analysis and production of the maps. It is kept separate from the previous step because the downloading is very time-consuming and it can better be completed before this step takes place, including checks on errors, timeouts etc.
 
