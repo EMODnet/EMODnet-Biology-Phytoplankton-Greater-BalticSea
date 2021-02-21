@@ -61,7 +61,7 @@ The wfs calls can also be found in the code.
 Per species the presence or absence in each of the sampling events is recorded as a Boolean variable. Output is restricted to species that have been found more than 200 times in the entire dataset, but this can be changed in the code. This file is to be used as a basis for the production of interpolation maps, but can also be used as a basis for clustering and descriptive analyses. The file is saved as an R binary file and as a .csv file.
 
 Per species, the presence/absence data are also rasterized in a relatively fine raster. For each raster cell, the proportion of observations with presence of the species is calculated. The map shows these proportions (between 0 and 1). 
-Currently, there are maps available for a total of XXX taxa. These encompass all taxa that have been observed more than 200 times in the total dataset of over XXX samples. 
+Currently, there are maps available for a total of 1029 taxa. These encompass all taxa that have been observed more than 200 times in the total dataset of over 34968 samples. 
 
 Distinction between ‘complete’ and ‘incomplete’ datasets was made based on the description of the datasets in the meta-information, and checked using the relation between sampling effort and number of species found. The latter showed a good overall correspondence for the ‘complete’ datasets, although some datasets focusing on estuarine areas had a relatively modest number of taxa found for a relatively large sampling effort.
 
