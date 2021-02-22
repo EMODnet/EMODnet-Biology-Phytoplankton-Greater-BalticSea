@@ -32,6 +32,13 @@ For the production of maps, we define 'sampling events' as the ensembles of reco
 ### Production of maps of the rasters
 We use the EMODnet mapping package EMODnetBiologyMaps to produce maps of the rasters.
 
+### Notes
+The phytoplankton data have different time series from different data sources/regions and hence the output data may differ in the total number of analyzed  samples for each dataset. A statistically weighted method of the analysis, taking into account the variation in time series would likely yield a different result. 
+
+Variation in the phytoplankton communities are strongly connected with season, with e.g. diatoms and dinoflagellates found in higher abundances in spring compared to summer and cyanobacteria found in higher abundances in summer compared to spring. A statistically weighted method of the analysis, taking into account seasonality would likely yield a different result. Some datasets are also limited to certain seasons such as spring or summer but lack data from autumn and winter which could further lead to biases in the analyses of whole time series including whole seasons in the data.
+
+Phytoplankton species often change names when taxonomist gain a better understanding of the placement in a taxonomic backbone. Therefore, some species such as Skeletonema marinoi may have different names in differnt datasets. The connection with a single aphaid but different names (synonyms) may help to clear the bias in name changes but as in the example of Skeletonema marinoi, this species have had a old name linked to it at least in data derived from the Kattegat and Skagerrak seas whereas in the Baltic Sea this species have always had the same name.  har haft sitt gamla namn under perioder  i vårt dataset.
+
 ## Directory structure
 ```
 Phytoplankton_greater_Baltic_Sea/
@@ -54,7 +61,7 @@ Phytoplankton_greater_Baltic_Sea/
 * **product** - Output product files. The subdirectory maps contains general files with the results of the analysis for all species found 200 times or more (note that for the rarer species no output is produced, although this can easily be done using the provided code). There are three files. spe.csv is a very large csv file recording for each species and each sampling event whether the species was present (1), absent (0) or not looked for (NA). This information is also stored in the binary file spe.Rdata that can only be read from R. The names and some attributes of the species in spe.csv are stored in specieslist.csv. For each species, a raster is made with fraction presences, and stored as a geotiff file in the subdirectory species_rasters. The rasters are plotted and stored per species in the subdirectory species_plots.
 
 ## Data series
-This product is based on the compilation of a large number of data sets. Details of candidate datasets and datasets actually used are in the code and in the ancillary .csv files. The best summary is given in the file ./data/derived_data/allDatasets_selection.csv. It lists dataset ids, titles, abstracts, as well as fields describing whether the data set has been included and whether it is 'complete' in the sense of having sampled the entire macro-endobenthic community.
+This product is based on the compilation of a large number of data sets. Details of candidate datasets and datasets actually used are in the code and in the ancillary .csv files. The best summary is given in the file ./data/derived_data/allDatasets_selection.csv. It lists dataset ids, titles, abstracts, as well as fields describing whether the data set has been included and whether it is 'complete' in the sense of having sampled the entire phytoplankton community.
 The wfs calls can also be found in the code.
 
 ## Data product
