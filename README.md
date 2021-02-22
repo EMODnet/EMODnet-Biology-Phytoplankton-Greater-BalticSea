@@ -18,7 +18,7 @@ In this step, we download the part of all these useful datasets that occur in th
 
 ![regions of interest](https://github.com/EMODnet/EMODnet-Biology-Phytoplankton-Greater-BalticSea/blob/master/regionsOfInterest.png)
 
-### step 3. Combine all downloaded datasets into one big dataset
+### Step 3. Combine all downloaded datasets into one big dataset
 In this step, we read in all the files written during the previous step, and combine the data into one big dataset to be used for further analysis and production of the maps. It is kept separate from the previous step because the downloading is very time-consuming and it can better be completed before this step takes place, including checks on errors, timeouts etc.
 
 ### Analysis of the species represented in the dataset
