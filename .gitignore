@@ -29,3 +29,10 @@ output/
 
 # RStudio
 .Rproj.user
+
+# Data product
+data/derived_data/all2Data.csv
+data/derived_data/allDataExtra.csv
+data/derived_data/*.Rdata
+product/species_rasters/*.tif
+data/raw_data/*/*.csv
