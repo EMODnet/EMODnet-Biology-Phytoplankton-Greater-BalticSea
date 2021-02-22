@@ -1,7 +1,7 @@
 ---
 title: "Phytoplankton_greater_Baltic_Sea"
 author: "Daniela Figueroa, Markus Lindh, Luuk van der Heijden, Willem Stolte and Lisa Sundqvist"
-date: "26-1-2021"
+date: "22-02-2021"
 knit: (function(inputFile, encoding) { 
       rmarkdown::render(inputFile,
                         encoding=encoding, 
