@@ -34,7 +34,7 @@ We use the EMODnet mapping package EMODnetBiologyMaps to produce maps of the ras
 
 ## Directory structure
 ```
-Benthos_greater_North_Sea/
+Phytoplankton_greater_Baltic_Sea/
 ├── analysis
 ├── data/
 │   ├── derived_data/
