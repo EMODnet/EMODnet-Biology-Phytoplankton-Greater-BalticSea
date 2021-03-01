@@ -16,6 +16,8 @@ In this file we perform the (manual) selection of datasets to be used. We also q
 ### Step 2. Download by dataset.
 In this step, we download the part of all these useful datasets that occur in the region of interest. For practical reasons this region is subdivided in many subregions - in that way the downloaded files are not too big and there is less risk of interruptions of the process. After download, all these files will be recombined into one big datafile. 
 
+The regions of interest were selected from the intersect of the Exclusive Economic Zones and IHO sea areas (Flanders Marine Institute, 2020) created by [Marine Regions](https://www.marineregions.org). The numbers specified in this map are the [Marine Regiones MRGIDs](https://marineregions.org/mrgid.php) of each gazetteer feature.
+
 ![regions of interest](https://github.com/EMODnet/EMODnet-Biology-Phytoplankton-Greater-BalticSea/blob/master/regionsOfInterest.png)
 
 ### Step 3. Combine all downloaded datasets into one big dataset
@@ -30,7 +32,7 @@ Results have been written to a file after performing this step once.
 For the production of maps, we define 'sampling events' as the ensembles of records that share time and place. We consider such events as one sample. For the incomplete datasets, we inventory what species they have targeted. Finally, for every species we determine whether or not it was present in all sampling events of all relevant datasets. This presence/absence information is written to the output file, together with the spatial location and the sampling date. The intention is to use this information to produce interpolated maps covering also the non-sampled space. As a first step in visualisation, we rasterize this information and show it in a map per species. In the following code block, the rasters are calculated and stored in one file per species (for all species that were found more than 200 times - this could easily be extended to all species).
 
 ### Production of maps of the rasters
-We use the EMODnet mapping package EMODnetBiologyMaps to produce maps of the rasters.
+We use the EMODnet mapping package [EMODnetBiologyMaps](https://github.com/EMODnet/EMODnetBiologyMaps) to produce maps of the rasters.
 
 ### Notes
 The phytoplankton data have different time series from different data sources/regions and hence the output data may differ in the total number of analyzed  samples for each dataset. A statistically weighted method of the analysis, taking into account the variation in time series would likely yield a different result. 
@@ -75,6 +77,14 @@ Currently, there are maps available for a total of 1003 taxa. These encompass al
 Distinction between ‘complete’ and ‘incomplete’ datasets was made based on the description of the datasets in the meta-information, and checked using the relation between sampling effort and number of species found. The latter showed a good overall correspondence for the ‘complete’ datasets, although some datasets focusing on estuarine areas had a relatively modest number of taxa found for a relatively large sampling effort.
 
 ## More information:
+### References
+
+Flanders Marine Institute (2020). The intersect of the Exclusive Economic Zones and IHO sea areas, version 4. Available online at https://www.marineregions.org/.https://doi.org/10.14284/402
+
+Salvador Fernández-Bejarano, Lennert Schepers (2020). EMODnetBiologyMaps: Creates ggplot maps with the style of EMODnet. R package version 0.0.1.0. Integrated data products created under the European Marine Observation Data Network (EMODnet) Biology project (EASME/EMFF/2017/1.3.1.2/02/SI2.789013), funded by the by the European Union under Regulation (EU) No 508/2014 of the European Parliament and of the Council of 15 May 2014 on the European Maritime and Fisheries Fund, https://github.com/EMODnet/EMODnetBiologyMaps
+
+WoRMS Editorial Board (2021). World Register of Marine Species. Available from https://www.marinespecies.org at VLIZ. Accessed 2021-03-01. doi:10.14284/170 
+
 ### Citation and download link
 This product should be cited as:
 
@@ -82,7 +92,7 @@ Daniela Figueroa, Markus Lindh, Luuk van der Heijden, Willem Stolte & Lisa Sundq
 
 Available to download in:
 
-{{link_download}}
+https://www.emodnet-biology.eu/data-catalog?module=dataset&dasid=6618
 
 ### Authors
 Daniela Figueroa, Markus Lindh, Luuk van der Heijden, Willem Stolte, Lisa Sundqvist
