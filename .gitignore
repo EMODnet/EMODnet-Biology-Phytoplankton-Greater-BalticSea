@@ -35,6 +35,7 @@ data/derived_data/all2Data.csv
 data/derived_data/allDataExtra.csv
 data/derived_data/*.Rdata
 product/species_rasters/*.tif
+product/species_plots/*.png
 data/raw_data/*/*.csv
 product/maps/*.csv
 product/maps/*.Rdata
